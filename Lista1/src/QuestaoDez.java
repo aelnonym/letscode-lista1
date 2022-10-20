@@ -21,7 +21,7 @@ public class QuestaoDez {
             totJuros = totJuros.add(jurosAtual);
             BigDecimal amortizacao = parcela.subtract(jurosAtual);
             saldoDevedor = saldoDevedor.subtract(amortizacao);
-            if(saldoDevedor.compareTo(BigDecimal.ZERO) == 0){
+            if(saldoDevedor.compareTo(new BigDecimal("0.00")) == -1){
                 saldoDevedor = BigDecimal.ZERO;
             }
             
